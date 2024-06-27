@@ -31,88 +31,46 @@ public class BERANDA extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         txtJumlahPemasukkan = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        txtJenisPengeluaran = new javax.swing.JTextField();
-        BTambah = new javax.swing.JButton();
-        BKurang = new javax.swing.JButton();
+        BTambahkan = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         txtJenisPemasukkan = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        txtJumlahPengeluaran = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         BDetail = new javax.swing.JButton();
+        JJenis = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Calibri Light", 1, 24)); // NOI18N
         jLabel1.setText("SMARTKOST");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 230, 60));
 
         jLabel2.setText("Saldo Anda :");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(551, 137, -1, -1));
-        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 90, 50));
 
         txtJumlahPemasukkan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtJumlahPemasukkanActionPerformed(evt);
             }
         });
-        getContentPane().add(txtJumlahPemasukkan, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 320, 30));
 
-        jLabel3.setText("Pemasukkan");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 90, 30));
-
-        jLabel4.setText("Pengeluaran");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, -1, -1));
-
-        txtJenisPengeluaran.addActionListener(new java.awt.event.ActionListener() {
+        BTambahkan.setText("Tambahkan");
+        BTambahkan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtJenisPengeluaranActionPerformed(evt);
+                BTambahkanActionPerformed(evt);
             }
         });
-        getContentPane().add(txtJenisPengeluaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 320, 30));
-
-        BTambah.setText("+");
-        getContentPane().add(BTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 230, -1, -1));
-
-        BKurang.setText("-");
-        BKurang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BKurangActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BKurang, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 390, -1, -1));
 
         jLabel5.setText("\"Budget Terjaga, Hidup Kost Bahagia!\"");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
 
         txtJenisPemasukkan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtJenisPemasukkanActionPerformed(evt);
             }
         });
-        getContentPane().add(txtJenisPemasukkan, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 320, 30));
-
-        jLabel6.setText("Nama");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, -1, -1));
-
-        jLabel7.setText("Jumlah");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, -1, -1));
-        getContentPane().add(txtJumlahPengeluaran, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 320, 30));
 
         jLabel8.setText("Nama");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, -1));
 
         jLabel9.setText("Jumlah");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 320, 910, 20));
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 320, 870, 20));
 
         BDetail.setText("Detail");
         BDetail.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +78,90 @@ public class BERANDA extends javax.swing.JFrame {
                 BDetailActionPerformed(evt);
             }
         });
-        getContentPane().add(BDetail, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 520, -1, -1));
+
+        JJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendapatan", "Pengeluaran" }));
+        JJenis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JJenisActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("Jenis");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(271, 271, 271)
+                        .addComponent(jLabel2)
+                        .addGap(38, 38, 38)
+                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(BDetail))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jLabel8)
+                        .addGap(33, 33, 33)
+                        .addComponent(txtJenisPemasukkan, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jLabel9)
+                        .addGap(27, 27, 27)
+                        .addComponent(txtJumlahPemasukkan, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jLabel3)
+                        .addGap(36, 36, 36)
+                        .addComponent(JJenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BTambahkan, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(293, 293, 293)))
+                .addGap(45, 45, 45))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel5))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(BDetail)))
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel8))
+                    .addComponent(txtJenisPemasukkan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtJumlahPemasukkan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JJenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(28, 28, 28)
+                .addComponent(BTambahkan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         setSize(new java.awt.Dimension(862, 658));
         setLocationRelativeTo(null);
@@ -129,14 +170,6 @@ public class BERANDA extends javax.swing.JFrame {
     private void txtJumlahPemasukkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahPemasukkanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtJumlahPemasukkanActionPerformed
-
-    private void txtJenisPengeluaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJenisPengeluaranActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtJenisPengeluaranActionPerformed
-
-    private void BKurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BKurangActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BKurangActionPerformed
 
     private void txtJenisPemasukkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJenisPemasukkanActionPerformed
         // TODO add your handling code here:
@@ -147,6 +180,14 @@ public class BERANDA extends javax.swing.JFrame {
         RINCIAN RINCIAN = new RINCIAN();
                 RINCIAN.setVisible(true);
     }//GEN-LAST:event_BDetailActionPerformed
+
+    private void BTambahkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTambahkanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTambahkanActionPerformed
+
+    private void JJenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JJenisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JJenisActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,23 +226,16 @@ public class BERANDA extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BDetail;
-    private javax.swing.JButton BKurang;
-    private javax.swing.JButton BTambah;
+    private javax.swing.JButton BTambahkan;
+    private javax.swing.JComboBox<String> JJenis;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField txtJenisPemasukkan;
-    private javax.swing.JTextField txtJenisPengeluaran;
     private javax.swing.JTextField txtJumlahPemasukkan;
-    private javax.swing.JTextField txtJumlahPengeluaran;
     // End of variables declaration//GEN-END:variables
 }
